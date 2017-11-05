@@ -1,3 +1,7 @@
-let c = "Carl is great";
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import './vendor/polyfills';
 
-console.log(c);
+
+import { AppModule } from './components/app/module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);

@@ -20,9 +20,14 @@ module.exports = {
     devtool: 'inline-source-map',
     module: {
         loaders: [
-            // { test: /.ts$/, use: ['awesome-typescript-loader', 'angular2-template-loader'] },
-            { test: /.ts$/, use: ['awesome-typescript-loader'] },
-            { test: /.html$/, use: 'raw-loader' }
+            {
+                test: /.ts$/,
+                use: ['awesome-typescript-loader', 'angular2-template-loader']
+            },
+            {
+                test: /.html$/,
+                use: 'raw-loader'
+            }
         ]
     },
     plugins: [
@@ -39,5 +44,4 @@ module.exports = {
             path.resolve(__dirname, '../src')
         )
     ]
-
-}
+};
